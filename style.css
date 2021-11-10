@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header {
+  z-index: 100;
+  background: #c70e0e;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.main-header__pokeball {
+  width: 2.5em;
+  padding: 0.5em;
+}
+
+.information {
+  background: linear-gradient(0deg, #af6836, #ffc297);
+  padding: 1em;
+}
+
+.information__box {
+  flex-direction: column;
+}
+
+.information__title {
+  flex-direction: column;
+}
+
+.information__header {
+  background: white;
+  border-radius: 2em;
+  font-size: large;
+  width: 90%;
+  padding: 0.6em;
+  text-align: center;
+}
+
+.information__pokemon-info {
+  background: white;
+  border-radius: 2em;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  width: 90%;
+}
+
+.information__pokemon-image {
+  width: 300px;
+  margin-bottom: -3em;
+  z-index: 1;
+}
+
+.information__content {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.info-labels {
+  font-weight: 700;
+  color: gray;
+  padding: 0.3em;
+}
+
+.footer {
+  flex-direction: column;
+  text-align: center;
+  padding: 1em 0em;
+}
+
+.footer__container {
+  width: 70%;
+  flex-wrap: wrap;
+}
+
+.footer__other-pokemon {
+  height: 3em;
+  width: 3em;
+  background: #ff9f9f;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.footer__other-pokemon:hover {
+  transform: scale(1.1);
+  background: radial-gradient(transparent, red);
+}
+
+.footer__icon {
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 426px) {
+  .main__container {
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: 56px 1fr 1fr;
+  }
+
+  .information__box {
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    margin: 0em auto;
+  }
+
+  .information__pokemon-image {
+    margin-bottom: 0;
+  }
+
+  .information__pokemon-info {
+    padding-top: 1em;
+    width: 35%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+  }
+
+  .information__content {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .footer {
+    flex-direction: row;
+    padding: 0em;
+  }
+}
